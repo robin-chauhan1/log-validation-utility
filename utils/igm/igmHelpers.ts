@@ -81,7 +81,7 @@ export function compareUpdatedAtAndContextTimeStamp({
     if (!_.lte(actionPayload[actionPayload.length - 1].updated_at, messageUpdatedAt)) {
       issueReportObj.updated_at = `The 'updated_at' of message/issue/issue_action/${actionType}/index[${
         actionPayload.length - 1
-      }]/updated_at should be the same as or less than 'message/issue/update_at' in ${endpoint}`
+      }]/updated_at should be the same as or less than 'message/issue/updated_at' in ${endpoint}`
     }
   } catch (error: any) {
     logger.error(`Error occurred while checking /${endpoint} message, ${error.stack}`)
